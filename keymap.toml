@@ -1,0 +1,8 @@
+# keymap.toml — minimal additions
+[mgr]
+prepend_keymap = [
+  { on = "<Space>", run = "toggle",  desc = "Toggle selection" },
+  { on = "o",       run = "open",    desc = "Open with system" },
+  { on = "i",       run = "spot",    desc = "File info" },
+  { on = ".",       run = "hidden",  desc = "Toggle hidden files" }
+]

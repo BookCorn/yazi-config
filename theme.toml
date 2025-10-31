@@ -1,0 +1,19 @@
+# theme.toml — remove pane dividers, keep everything else
+[mgr]
+# make the two vertical split lines invisible
+border_symbol = " "
+border_style  = { fg = "reset", bg = "reset" }
+
+hovered = { bg = "darkgray", fg = "white", bold = true }
+
+[status]
+overall = { bg = "black", fg = "white" }
+
+[tabs]
+active   = { fg = "white", bg = "blue", bold = true }
+inactive = { fg = "gray",  bg = "reset" }
+
+[filetype]
+rules = [
+  { url = "*/", fg = "blue" }
+]
