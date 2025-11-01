@@ -10,8 +10,8 @@ mouse_events = ["click", "scroll"]
 
 [preview]
 wrap = "yes"
-max_width  = 120
-max_height = 40
+max_width  = 1200
+max_height = 900
 image_delay = 60
 image_filter  = "triangle"
 image_quality = 75
@@ -24,8 +24,8 @@ macro_workers = 2
 
 [opener]
 edit = [
-  { run = "$EDITOR %s", block = true, for = "unix" },
-  { run = "code %s",     orphan = true, for = "unix" }
+  { run = "$EDITOR \"$@\"", block = true, for = "unix" },
+  { run = "code \"$@\"",     orphan = true, for = "unix" }
 ]
 open = [
   { run = "xdg-open %s", desc = "Open", for = "linux" },
