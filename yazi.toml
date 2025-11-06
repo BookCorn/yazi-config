@@ -22,8 +22,15 @@ image_bound = [3840, 2160]
 micro_workers = 4
 macro_workers = 2
 
+[env]
+# Ensure Yazi uses Neovim for any editor-based actions (e.g. batch rename)
+VISUAL = "nvim"
+EDITOR = "nvim"
+
 [opener]
 edit = [
+  # Prefer a direct Neovim call on macOS to avoid invalid $EDITOR values
+  { run = "nvim \"$@\"", block = true, for = "macos" },
   { run = "$EDITOR \"$@\"", block = true, for = "unix" },
   { run = "code \"$@\"",     orphan = true, for = "unix" }
 ]
